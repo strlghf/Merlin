@@ -2,9 +2,11 @@ import "./Header.css";
 import { useRef, type ChangeEvent } from "react";
 import { useSearch } from "../hooks/useSearch";
 import logoImg from "../img/geforce.jpeg";
+import { useScrolling } from "../hooks/useScrolling";
 
 export function Header () {
   const { search, setSearch, handleSearchSubmit } = useSearch();
+  const { visible } = useScrolling();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -17,7 +19,7 @@ export function Header () {
   }
 
   return (
-    <header className="main-header">
+    <header className={`main-header ${!visible ? "header-hidden" : ""}`}>
       <a href="#" className="header-logo">
         <img src={logoImg} alt="Home" />
       </a>

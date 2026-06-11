@@ -6,7 +6,7 @@ export const useScrolling = () => {
 
   useEffect(() => {
     const controlHeader = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      if (window.scrollY > lastScrollY && window.scrollY > 70) {
         setVisible(false);
       } else {
         setVisible(true);
