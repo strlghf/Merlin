@@ -1,7 +1,7 @@
 import "./Header.css";
 import { useRef, type ChangeEvent } from "react";
 import { useSearch } from "../hooks/useSearch";
-import logoImg from "../img/geforce.jpeg";
+import logoImg from "../img/kl.jpg";
 import { useScrolling } from "../hooks/useScrolling";
 
 export function Header () {
