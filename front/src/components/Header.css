@@ -61,7 +61,7 @@
   right: 5px;
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -99,9 +99,9 @@
   transition: background-color .3s ease, color .3s ease;
 }
 
-.header-action-btn:hover {
-  background-color: rgba(255, 255, 255, .8);
-  color: #494949;
+.header-actions a[href="/wishlist"]:hover {
+  color: #ff3366;
+  background-color: rgba(255, 51, 102, 0.1);
 }
 
 @media (max-width: 1150px) {

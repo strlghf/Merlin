@@ -7,6 +7,7 @@ import cors  from "cors"
 
 const app = express();
 const PORT = process.env.PORT ?? 3031
+// 1 - tsc type check; 2 - tsx
 
 app.use(express.json());
 app.use(cookieParser());

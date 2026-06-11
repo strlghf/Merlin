@@ -1,7 +1,7 @@
-import logoImg from "../img/geforce.jpeg";
 import "./Header.css";
 import { useRef, type ChangeEvent } from "react";
 import { useSearch } from "../hooks/useSearch";
+import logoImg from "../img/geforce.jpeg";
 
 export function Header () {
   const { search, setSearch, handleSearchSubmit } = useSearch();
@@ -21,7 +21,6 @@ export function Header () {
       <a href="#" className="header-logo">
         <img src={logoImg} alt="Home" />
       </a>
-
       <form className="header-search-form" onSubmit={handleSearchSubmit}>
         <input
           type="text"
@@ -29,7 +28,7 @@ export function Header () {
           ref={inputRef}
           onChange={handleChange}
           className="header-search-input"
-          placeholder="Nvidia 2080 TI, AMD Ryzen 7200"
+          placeholder="Search products, brands..."
         />
         <button type="submit" className="header-search-btn" onClick={handleClick}>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -38,30 +37,18 @@ export function Header () {
           </svg>
         </button>
       </form>
-
-      {/* <input type="checkbox" id="menu-toggle" className="header-checkbox" />
-      <div className="header-overlay"></div>
-      
-      <label htmlFor="menu-toggle" className="header-menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
-      <nav className="header-nav-container">
-        <a className="btn-free-class btn-mobile" href="#">Carrito</a>
-      </nav>
-
-      <a className="btn-free-class btn-desktop" href="#">Carrito</a> */}
-
       <div className="header-actions">
+        <a href="/wishlist" className="header-action-btn" aria-label="Mis Favoritos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </a>
         <a href="/account" className="header-action-btn" aria-label="Mi Cuenta">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
         </a>
-
         <a href="/cart" className="header-action-btn header-cart-toggle" aria-label="Ver Carrito">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="9" cy="21" r="1"></circle>

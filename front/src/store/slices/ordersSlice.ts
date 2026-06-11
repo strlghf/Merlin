@@ -1,4 +1,4 @@
-import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface OrdersState {
   id: number;
@@ -13,7 +13,9 @@ const initialState: OrdersState[] = [];
 export const ordersSlice = createSlice({
   name: "orders",
   initialState,
-  reducers: {}
+  reducers: {
+    
+  }
 })
 
 export const {} = ordersSlice.actions;

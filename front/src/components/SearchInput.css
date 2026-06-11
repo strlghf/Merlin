@@ -1,0 +1,19 @@
+.main-header {
+  position: fixed;
+  padding: 15px 4%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  transform: translateY(0);
+}
+
+.main-header.header-hidden {
+  transform: translateY(-100%);
+}
